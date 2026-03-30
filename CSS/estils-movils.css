@@ -1,28 +1,32 @@
-/* estils.movils.css */
-/* Estils generics per a dispositius mòbils */
+/* estils-movils.css — Mobile Responsive Overrides */
+
 @media (max-width: 842px) {
+	/* Typography */
 	.intro h1 {
 		font-size: 2rem;
 	}
 
 	.intro h2 {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 
+	/* Gallery */
 	.gallery-container img {
 		width: 100%;
+		border-radius: var(--radius-sm, 8px);
 	}
 
+	/* CTA */
 	.cta-button {
 		font-size: 1rem;
 		padding: 0.8rem 1.5rem;
 	}
 
-	/* Footer-movil visible només en dispositius mòbils */
+	/* Mobile footer */
 	.footer-movil {
 		display: block;
 		background-color: #202929;
-		padding: 1rem;
+		padding: 0.8rem 1rem;
 		text-align: center;
 		position: sticky;
 		bottom: 0;
@@ -36,10 +40,11 @@
 	}
 
 	.footer-movil .social-btn img {
-		width: 40px;
-		height: 40px;
+		width: 38px;
+		height: 38px;
 	}
 
+	/* Location page */
 	.location-header h1 {
 		font-size: 2rem;
 	}
@@ -48,7 +53,6 @@
 		font-size: 1rem;
 	}
 
-	/* Ajustos del mapa i contingut */
 	.map-container {
 		width: 100%;
 		height: 300px;
@@ -63,7 +67,6 @@
 		display: block;
 	}
 
-	/* Ajustos de les targetes */
 	.location-info {
 		grid-template-columns: 1fr;
 		gap: 1rem;
@@ -73,13 +76,12 @@
 	}
 
 	.info-card {
-		padding: 1rem;
+		padding: 1.5rem;
 		width: 100%;
 		box-sizing: border-box;
 		margin: 0;
 	}
 
-	/* Ajustos del botó */
 	.direction-button {
 		width: auto;
 		display: inline-block;
@@ -95,7 +97,20 @@
 		overflow-x: hidden;
 	}
 
-	/* Simple fix for email overflow in mobile contact menu */
+	/* Video hero mobile */
+	.video-background {
+		height: 50vh;
+	}
+
+	.video-background .video-overlay h1 {
+		font-size: 2.4rem;
+	}
+
+	.video-background .video-overlay p {
+		font-size: 1rem;
+	}
+
+	/* Email overflow fix */
 	.email-option .contact-detail {
 		font-size: 11px !important;
 		word-spacing: -1px;

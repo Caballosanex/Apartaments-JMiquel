@@ -48,12 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			thumbnails[index].style.opacity = '1';
 			thumbnails[index].style.transform = 'scale(1.05)';
-			thumbnails[index].style.boxShadow = '0 0 0 2px #ff8c00';
+			thumbnails[index].style.boxShadow = '0 0 0 2.5px var(--color-primary, #ff8c00)';
+			thumbnails[index].style.borderColor = 'var(--color-primary, #ff8c00)';
 		});
 	});
 
 	// Marcar la primera thumbnail com activa inicialment
 	thumbnails[0].style.opacity = '1';
 	thumbnails[0].style.transform = 'scale(1.05)';
-	thumbnails[0].style.boxShadow = '0 0 0 2px #ff8c00';
+	thumbnails[0].style.boxShadow = '0 0 0 2.5px var(--color-primary, #ff8c00)';
+	thumbnails[0].style.borderColor = 'var(--color-primary, #ff8c00)';
 });
