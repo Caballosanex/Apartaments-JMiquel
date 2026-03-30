@@ -1,0 +1,46 @@
+name: Deploy to S3 + CloudFront
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      - name: Sync HTML / CSS / JS
+        run: |
+          aws s3 sync . s3://apartamentsjmiquel-com \
+            --exclude "*" \
+            --include "*.html" \
+            --include "*.css" \
+            --include "*.js" \
+            --include "robots.txt" \
+            --include "sitemap.xml" \
+            --include "site.webmanifest" \
+            --include "_headers" \
+            --cache-control "public, max-age=86400" \
+            --delete
+
+      - name: Sync images and videos
+        run: |
+          aws s3 sync media/ s3://apartamentsjmiquel-com/media/ \
+            --cache-control "public, max-age=604800"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E2XG9D04WBX972 \
+            --paths "/*"

@@ -1,0 +1,154 @@
+/* estils-apartaments.css */
+.apartments-main {
+	padding: 2rem;
+	background-image: url('../media/fons_apartament.webp');
+}
+
+.apartments-header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.apartments-header h1 {
+	color: #ff8c00;
+	font-size: 2.5rem;
+	text-shadow: 1px 1px 0px #000;
+	margin: 0;
+}
+
+.apartments-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.apartment-card {
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.apartment-card:hover {
+	transform: translateY(-5px);
+}
+
+.apartment-image {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+}
+
+.apartment-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.apartment-card:hover .apartment-image img {
+	transform: scale(1.1);
+}
+
+.apartment-image .more-info-btn {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #ff8c00;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: 500;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.apartment-card:hover .apartment-image .more-info-btn {
+	opacity: 1;
+}
+
+.apartment-content {
+	padding: 1.5rem;
+}
+
+.apartment-content h2 {
+	color: #004d4d;
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem 0;
+}
+
+.location {
+	color: #ff8c00;
+	font-weight: 500;
+	margin: 0 0 1rem 0;
+}
+
+.description {
+	color: #333;
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* Amaguem el botó del content en escriptori */
+.apartment-content .more-info-btn {
+	display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+	.apartments-main {
+		padding: 1rem;
+	}
+
+	.apartments-header h1 {
+		font-size: 2rem;
+	}
+
+	.apartments-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.apartment-image {
+		position: relative;
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.apartment-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	/* Amaguem el botó de la imatge en mòbil */
+	.apartment-image .more-info-btn {
+		display: none;
+	}
+
+	.apartment-content {
+		position: relative;
+		padding: 1.5rem;
+	}
+
+	/* Mostrem el botó del content en mòbil */
+	.apartment-content .more-info-btn {
+		display: block;
+		opacity: 1;
+		position: static;
+		width: 100%;
+		text-align: center;
+		margin: 1rem 0 0;
+		padding: 0.75rem 0;
+		background-color: #ff8c00;
+		border-radius: 4px;
+		transform: none;
+		color: white;
+		text-decoration: none;
+		font-weight: 500;
+	}
+}

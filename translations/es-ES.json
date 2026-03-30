@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Apartamentos J.Miquel | Alquiler Apartamentos Llivia",
+    "description": "Alquiler de apartamentos en Llivia: turismo rural, deportes de aventura y relax.",
+    "keywords": "alquiler, vacaciones, apartamentos, Llivia, turismo rural, Cerdanya"
+  },
+  "navigation": {
+    "home": "INICIO",
+    "testimonials": "OPINIONES",
+    "apartments": "APARTAMENTOS",
+    "about": "QUIÉNES SOMOS",
+    "location": "DÓNDE ESTAMOS",
+    "contact": "¡CONTACTA!",
+    "viaEmail": "Por EMAIL",
+    "viaPhone": "Por Teléfono"
+  },
+  "hero": {
+    "title": "Vive la Cerdanya",
+    "subtitle": "Descubre nuestros apartamentos en Llívia"
+  },
+  "intro": {
+    "title": "APARTAMENTOS J. MIQUEL",
+    "subtitle": "Alquiler de Apartamentos en Llívia",
+    "description": "Alquiler de apartamentos en una ubicación privilegiada en la Cerdanya. Disfruta de una estancia rodeado de naturaleza y aventuras. Ya sea que busques un fin de semana relajante, una escapada corta, o un alquiler de temporada, te ofrecemos el espacio ideal para desconectar y vivir momentos únicos."
+  },
+  "testimonials": {
+    "title": "¿Qué dicen nuestros clientes?",
+    "quote1": "Un lugar perfecto para desconectar. ¡Repetiremos seguro!",
+    "author1": "María P.",
+    "quote2": "Apartamentos muy limpios y con todo lo que necesitas.",
+    "author2": "Jorge L."
+  },
+  "apartments": {
+    "title": "APARTAMENTOS DE ALQUILER",
+    "viewImages": "Ver imágenes",
+    "apartmentGirona": "APARTAMENTO GIRONA",
+    "apartmentLlauro": "APARTAMENTO LLAURÓ",
+    "apartmentMbp": "APARTAMENTO MBP",
+    "apartmentMunoz1": "APARTAMENTO MUÑOZ 1",
+    "apartmentMunoz2": "APARTAMENTO MUÑOZ 2",
+    "apartmentOrlando": "APARTAMENTO ORLANDO",
+    "apartmentPirineu": "APARTAMENTO PIRINEO",
+    "apartmentTroc": "APARTAMENTO TROC",
+    "locationGirona": "Calle les Bulloses",
+    "locationLlauro": "Calle Encorones",
+    "locationMbp": "Avenida Catalunya",
+    "locationMunoz": "Calle Encorones",
+    "locationPirineu": "Calle Pirineo",
+    "locationTroc": "Avenida Catalunya",
+    "descriptionGirona": "Planta Baja Dúplex. Totalmente reformado. Capacidad para 5 personas, 1 Baño y 1 Aseo y 2 habitaciones. Parking y trastero. Zona comunitaria con piscina, tenis y terraza particular. Muy soleado.",
+    "descriptionLlauro": "Primera Planta con capacidad para 5 personas. 2 Habitaciones, Cocina-Comedor con chimenea y 1 Baño. Zona comunitaria con piscina y tenis, totalmente reformado con parking y trastero. Ambiente Familiar.",
+    "descriptionMbp": "Planta Baja de 70 m2 con capacidad para 7 personas, 3 Habitaciones, 1 Baño y 1 Aseo. Salón-Comedor y una gran Cocina. Parking y trastero. Zona comunitaria con Piscina y tenis con terraza particular.",
+    "descriptionMunoz1": "Primera Planta con capacidad para 5 personas. 2 Habitaciones, Cocina-Comedor con chimenea y 1 Baño, parking y terraza. Dispone de jardín comunitario con piscina y pista de tenis.",
+    "descriptionOrlando": "Ático de 90 m2, Dúplex con capacidad para 7 personas con 3 Habitaciones, Cocina, Salón-Comedor con chimenea y 2 Baños. Parking y trastero. Zona comunitaria con piscina y tenis. Muy amplio y acogedor.",
+    "descriptionPirineu": "Primera Planta de 40 m2 con capacidad para 2 personas. 1 habitación doble, Cocina-Comedor con chimenea, 1 Baño, parking y Terraza. Muy acogedor y soleado.",
+    "descriptionMunoz2": "1ª planta con capacidad para 5 personas. Cocina-Comedor, 1 Baño, y terraza particular con 3 habitaciones. Con trastero y parking.",
+    "descriptionTroc": "Planta Baja de 95 m2 con capacidad para 8 personas, muy amplio. 2 Baños grandes, 4 habitaciones, cocina-comedor con chimenea. Zona comunitaria y terraza particular, parking y trastero."
+  },
+  "about": {
+    "title": "NUESTRA HISTORIA",
+    "subtitle": "Desde 1975 haciéndoos sentir como en casa",
+    "beginningsTitle": "NUESTROS INICIOS",
+    "beginningsText": "Todo comenzó en 1975 cuando el abuelo Miquel decidió compartir la belleza de Llívia con otras familias. Lo que comenzó como un pequeño negocio familiar se ha convertido en un referente de alojamiento en la zona, manteniendo siempre el espíritu cercano que nos caracteriza.",
+    "valuesTitle": "NUESTROS VALORES",
+    "value1": "🏠 Ambiente familiar y acogedor",
+    "value2": "💝 Trato cercano y personalizado",
+    "value3": "✨ Cuidado por los detalles",
+    "value4": "🤝 Compromiso con nuestros clientes",
+    "missionTitle": "NUESTRA MISIÓN",
+    "missionText": "Ofrecer una experiencia única y confortable, haciendo que cada estancia sea especial. Queremos que nuestros apartamentos sean vuestro segundo hogar en la Cerdanya, un lugar donde crear recuerdos inolvidables con la familia y amigos.",
+    "qualityTitle": "CALIDAD Y CONFORT",
+    "qualityText": "Todos nuestros apartamentos están completamente equipados y mantenidos con cuidado. Nuestra experiencia de más de 45 años nos permite anticiparnos a vuestras necesidades y ofreceros todo lo que necesitáis para disfrutar de vuestras vacaciones."
+  },
+  "location": {
+    "title": "DÓNDE NOS PUEDES ENCONTRAR",
+    "subtitle": "En el corazón de la Cerdanya, en Llívia",
+    "addressTitle": "Dirección",
+    "address1": "C/Troc, 12. Escalera E, bajos 2a",
+    "address2": "17527 Llívia, Girona",
+    "directions": "Cómo llegar",
+    "contactTitle": "Contacto",
+    "interestTitle": "Puntos de interés cercanos",
+    "interest1": "🏰 Castillo de Llívia (5 min)",
+    "interest2": "🏥 Farmacia de Llívia (2 min)",
+    "interest3": "🏙️ Puigcerdà (8 min)",
+    "interest4": "⛷️ Estación de esquí Font-Romeu (20 min)",
+    "interest5": "🏪 Supermercado (3 min)"
+  },
+  "cookies": {
+    "message": "Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas su uso.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "moreInfo": "Más info",
+    "policyTitle": "Política de Cookies",
+    "responsibleTitle": "Responsable del Tratamiento",
+    "dataProtection": "Delegado de Protección de Datos: monialp2500@gmail.com",
+    "usageTitle": "Uso de Cookies",
+    "usageText1": "El acceso a este sitio web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada usuario para que el servidor recuerde cierta información que posteriormente pueda utilizar. Esta información permite identificarle como un usuario concreto y permite guardar sus preferencias personales, así como información técnica como pueden ser visitas o páginas concretas que visite.",
+    "usageText2": "La legitimación para el uso de las cookies se basa en el artículo 6.1.f del RGPD: interés legítimo por parte de 3 BLAGAR SL para garantizar el correcto funcionamiento y la mejora continua del sitio web.",
+    "whatAreTitle": "¿Qué son las Cookies?",
+    "whatAreText": "Las cookies son pequeños archivos de texto que los sitios web instalan en el navegador del usuario para registrar su actividad y personalizar su experiencia de navegación. Las cookies pueden mejorar la navegación recordando las preferencias y configuraciones del sitio web, como el idioma preferido o las credenciales de acceso. También pueden proporcionar información a los propietarios del sitio sobre los patrones de tráfico y comportamiento de los usuarios, permitiendo mejorar constantemente la experiencia digital.",
+    "usedTitle": "Cookies Utilizadas",
+    "ownCookiesTitle": "Cookies Propias",
+    "tableName": "Nombre",
+    "tablePurpose": "Finalidad",
+    "tableDuration": "Duración",
+    "consentPurpose": "Almacena la preferencia del usuario sobre la aceptación de cookies",
+    "consentDuration": "365 días",
+    "scrollPurpose": "Guarda la posición de desplazamiento para mejorar la experiencia de navegación",
+    "scrollDuration": "1 día",
+    "languagePurpose": "Almacena el idioma seleccionado por el usuario para personalizar la experiencia",
+    "languageDuration": "30 días",
+    "disableTitle": "Cómo Deshabilitar las Cookies",
+    "disableText": "Puede deshabilitar las cookies ajustando la configuración de su navegador. Tenga en cuenta que algunas funcionalidades del sitio web podrían no funcionar correctamente. Aquí tiene los enlaces a las instrucciones de los navegadores más populares:"
+  },
+  "language": {
+    "autoDetected": "Hemos detectado que prefieres el español. ¿Quieres continuar con este idioma?",
+    "confirm": "Sí, continuar",
+    "change": "Cambiar idioma",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lloguer d'apartaments a Llivia: turisme rural, esports d'aventura i relax.">
+	<meta name="keywords" content="lloguer, vacances, apartaments, Llivia, turisme rural, Cerdanya">
+	<meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+	<meta http-equiv="Expires" content="31536000">
+
+	<!-- Preload critical resources -->
+	<link rel="preload" as="style"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+	<link rel="stylesheet" href="CSS/estils.css">
+	<link rel="stylesheet" href="CSS/estils-movils.css">
+	<link rel="stylesheet" href="CSS/language.css">
+	<link rel="preload" as="image" href="media/logo.webp">
+	<link rel="preload" as="image" href="media/fons_apartament.webp">
+
+	<!-- Non-critical CSS loaded asynchronously -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+		media="print" onload="this.media='all'">
+
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+	</noscript>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="media/casa.ico">
+
+	<title data-translate="meta.title">Apartaments J.Miquel | Lloguer Apartaments Llivia</title>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<div class="logo">
+			<img src="media/logo.webp" alt="Logo Apartaments J. Miquel" width="166" height="90" decoding="async">
+		</div>
+
+		<div class="social-buttons">
+			<a href="https://www.facebook.com/people/Apartaments-lloguer-jmiquel-llivia/100057320145535/"
+				target="_blank" class="social-btn">
+				<img src="media/facebook.webp" alt="Facebook" width="50" height="50" decoding="async">
+			</a>
+			<a href="https://www.instagram.com/apartamentsjmiquel/" target="_blank" class="social-btn">
+				<img src="media/instagram.webp" alt="Instagram" width="50" height="50" decoding="async">
+			</a>
+			<a href="https://x.com/apartjmiquel" target="_blank" class="social-btn">
+				<img src="media/twitter.webp" alt="Twitter" width="50" height="50" decoding="async">
+			</a>
+		</div>
+
+		<div class="menu">
+			<input type="checkbox" id="menu-toggle" class="menu-toggle">
+			<label for="menu-toggle" class="menu-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<nav class="menu-items" aria-label="Menú de navegació">
+				<a href="index.html#intro" data-translate="navigation.home">INICI</a>
+				<a href="index.html#testimonials" data-translate="navigation.testimonials">OPINIONS</a>
+				<a href="apartaments.html" data-translate="navigation.apartments">APARTAMENTS</a>
+				<a href="aboutus.html" data-translate="navigation.about">QUI SOM</a>
+				<a href="whereami.html" data-translate="navigation.location">ON SOM</a>
+				<div class="contact-wrapper">
+					<a href="#" class="contact-trigger" data-translate="navigation.contact">CONTACTA!</a>
+					<div class="contact-submenu">
+						<a href="mailto:apartjmiquel@hotmail.com" class="contact-option email-option">
+							<div class="contact-content">
+								<div class="contact-line">
+									<span class="contact-icon">✉️</span>
+									<span class="contact-text" data-translate="navigation.viaEmail">Via E-MAIL</span>
+								</div>
+								<div class="contact-detail">apartjmiquel@hotmail.com</div>
+							</div>
+						</a>
+						<a href="tel:628605545" class="contact-option phone-option">
+							<div class="contact-content">
+								<div class="contact-line">
+									<span class="contact-icon">📞</span>
+									<span class="contact-text" data-translate="navigation.viaPhone">Via Telèfon</span>
+								</div>
+								<div class="contact-detail">628 605 545</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<style>
+		body {
+			background-image: url('media/fons_apartament.webp');
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		.cookies-info {
+			max-width: 1200px;
+			margin: 2em auto;
+			padding: 0 20px;
+		}
+
+		.cookies-policy {
+			background-color: white;
+			padding: 2em;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		}
+
+		.policy-section {
+			margin-bottom: 2em;
+		}
+
+		.policy-section h1 {
+			color: var(--primary-color);
+			font-size: 2em;
+			margin-bottom: 1em;
+		}
+
+		.policy-section h2 {
+			color: var(--secondary-color);
+			font-size: 1.5em;
+			margin: 1em 0;
+		}
+
+		.policy-section h3 {
+			color: var(--secondary-color);
+			font-size: 1.2em;
+			margin: 1em 0;
+		}
+
+		.policy-section p {
+			line-height: 1.6;
+			margin-bottom: 1em;
+		}
+
+		.cookies-table table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 1em 0;
+		}
+
+		.cookies-table th, 
+		.cookies-table td {
+			padding: 12px;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+
+		.cookies-table th {
+			background-color: #333;
+			color: white;
+			font-weight: bold;
+		}
+
+		.cookies-table tr:nth-child(even) {
+			background-color: #f5f5f5;
+		}
+
+		.policy-section ul {
+			list-style-type: disc;
+			margin-left: 2em;
+		}
+
+		.policy-section a {
+			color: var(--primary-color);
+			text-decoration: none;
+		}
+
+		.policy-section a:hover {
+			text-decoration: underline;
+		}
+
+		@media (max-width: 768px) {
+			.cookies-table {
+				overflow-x: auto;
+				display: block;
+			}
+		}
+	</style>
+
+	<main class="cookies-info">
+		<section class="cookies-policy">
+			<h1 data-translate="cookies.policyTitle">Política de Cookies</h1>
+
+			<article class="policy-section">
+				<h2 data-translate="cookies.responsibleTitle">Responsable del Tractament</h2>
+				<p>3 BLAGAR SL<br>
+				Domicili social: Calle Madrazo 70 5º 3ra<br>
+				08006 Barcelona, Barcelona</p>
+
+				<p data-translate="cookies.dataProtection">Delegat de Protecció de Dades: monialp2500@gmail.com</p>
+			</article>
+
+			<article class="policy-section">
+				<h2 data-translate="cookies.usageTitle">Ús de Cookies</h2>
+				<p data-translate="cookies.usageText1">L'accés a aquest lloc web pot implicar la utilització de cookies. Les cookies són petites quantitats d'informació que s'emmagatzemen al navegador utilitzat per cada usuari perquè el servidor recordi certa informació que posteriorment pugui utilitzar. Aquesta informació permet identificar-lo com un usuari concret i permet guardar les seves preferències personals, així com informació tècnica com poden ser visites o pàgines concretes que visiti.</p>
+
+				<p data-translate="cookies.usageText2">La legitimació per a l'ús de les cookies es basa en l'article 6.1.f del RGPD: interès legítim per part de 3 BLAGAR SL per garantir el correcte funcionament i la millora contínua del lloc web.</p>
+			</article>
+
+			<article class="policy-section">
+				<h2 data-translate="cookies.whatAreTitle">Què són les Cookies?</h2>
+				<p data-translate="cookies.whatAreText">Les cookies són petits arxius de text que els llocs web instal·len al navegador de l'usuari per registrar la seva activitat i personalitzar la seva experiència de navegació. Les cookies poden millorar la navegació recordant les preferències i configuracions del lloc web, com l'idioma preferit o les credencials d'accés. També poden proporcionar informació als propietaris del lloc sobre els patrons de trànsit i comportament dels usuaris, permetent millorar constantment l'experiència digital.</p>
+			</article>
+
+			<article class="policy-section">
+				<h2 data-translate="cookies.usedTitle">Cookies Utilitzades</h2>
+				<div class="cookies-table">
+					<h3 data-translate="cookies.ownCookiesTitle">Cookies Pròpies</h3>
+					<table>
+						<tr>
+							<th data-translate="cookies.tableName">Nom</th>
+							<th data-translate="cookies.tablePurpose">Finalitat</th>
+							<th data-translate="cookies.tableDuration">Duració</th>
+						</tr>
+						<tr>
+							<td>cookieConsent</td>
+							<td data-translate="cookies.consentPurpose">Emmagatzema la preferència de l'usuari sobre l'acceptació de cookies</td>
+							<td data-translate="cookies.consentDuration">365 dies</td>
+						</tr>
+						<tr>
+							<td>scrollPosition</td>
+							<td data-translate="cookies.scrollPurpose">Guarda la posició de desplaçament per millorar l'experiència de navegació</td>
+							<td data-translate="cookies.scrollDuration">1 dia</td>
+						</tr>
+						<tr>
+							<td>selectedLanguage</td>
+							<td data-translate="cookies.languagePurpose">Emmagatzema l'idioma seleccionat per l'usuari per personalitzar l'experiència</td>
+							<td data-translate="cookies.languageDuration">30 dies</td>
+						</tr>
+					</table>
+				</div>
+
+				<h3 data-translate="cookies.disableTitle">Com Deshabilitar les Cookies</h3>
+				<p data-translate="cookies.disableText">Pot deshabilitar les cookies ajustant la configuració del seu navegador. Tingui en compte que algunes funcionalitats del lloc web podrien no funcionar correctament. Aquí té els enllaços a les instruccions dels navegadors més populars:</p>
+				<ul>
+					<li><a href="https://support.google.com/chrome/answer/95647?hl=ca" target="_blank">Google Chrome</a></li>
+					<li><a href="https://support.mozilla.org/ca/kb/cookies-informacio-que-els-llocs-web-guarden-en-" target="_blank">Mozilla Firefox</a></li>
+					<li><a href="https://support.apple.com/ca-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+					<li><a href="https://support.microsoft.com/ca-es/windows/eliminar-i-administrar-galetes-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">Microsoft Edge</a></li>
+				</ul>
+			</article>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; <span id="currentYear"></span> Apartaments J. Miquel. Tots els drets reservats.</p>
+	</footer>
+
+	<!-- Sticky Footer for Social Buttons -->
+	<footer class="footer-movil">
+		<div class="footer-socials-movil">
+			<a href="fb://profile/100057320145535" class="social-btn">
+				<img src="media/facebook.webp" alt="Facebook" width="50" height="50" decoding="async">
+			</a>
+			<a href="instagram://user?username=apartamentsjmiquel" class="social-btn">
+				<img src="media/instagram.webp" alt="Instagram" width="50" height="50" decoding="async">
+			</a>
+			<a href="twitter://user?screen_name=apartjmiquel" class="social-btn">
+				<img src="media/twitter.webp" alt="Twitter" width="50" height="50" decoding="async">
+			</a>
+		</div>
+	</footer>
+
+	<!-- Cookie consent banner -->
+
+	<div id="cookieConsent" class="cookie-consent">
+		<div class="cookie-content">
+			<p data-translate="cookies.message">Utilitzem cookies per millorar la seva experiència. En continuar navegant, accepta el seu ús.</p>
+			<div class="cookie-buttons">
+				<button id="acceptCookies" class="cookie-accept" aria-label="Acceptar cookies" data-translate="cookies.accept" data-translate-aria="cookies.accept">Acceptar</button>
+				<button id="rejectCookies" class="cookie-reject" aria-label="Rebutjar cookies" data-translate="cookies.reject" data-translate-aria="cookies.reject">Rebutjar</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load JavaScript asynchronously -->
+	<script src="js/language.js" defer></script>
+	<script src="js/header&cookies.js" defer></script>
+
+</body>
+
+</html>

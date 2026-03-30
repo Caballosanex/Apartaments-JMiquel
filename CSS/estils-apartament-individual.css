@@ -1,0 +1,164 @@
+/* estils-apartament-individual.css */
+.apartment-details {
+	margin: 0 auto;
+	padding: 2rem;
+	background-image: url('../media/fons_apartament.webp');
+}
+
+.apartment-info {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.apartment-info h1 {
+	color: #ff8c00;
+	font-size: 2.5rem;
+	text-shadow: 1px 1px 0px #000;
+	margin: 0 0 1rem;
+}
+
+.apartment-info .location {
+	color: #ffffff;
+	font-weight: 500;
+	margin: 0 0 1rem;
+	text-shadow: 1px 1px 0px #000;
+	font-size: x-large;
+}
+
+.apartment-info .hutg {
+	color: #ff8c00;
+	font-weight: bold;
+	margin: 0 0 1rem;
+	text-shadow: 1px 1px 0px #000;
+	font-size: large;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	display: inline-block;
+	border: 2px solid #ff8c00;
+}
+
+.apartment-info .description {
+	color: #333;
+	line-height: 1.6;
+	margin: 0 auto;
+	max-width: 800px;
+	font-size: large;
+}
+
+/* Estils de la galeria */
+.image-gallery {
+	margin: 2rem 0;
+}
+
+.image-gallery input[type="radio"] {
+	display: none;
+}
+
+.gallery-container {
+	background: white;
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.gallery-main {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	/* Mes numero = Imatges mes altes a la galeria */
+	overflow: hidden;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+}
+
+.main-img {
+	display: flex;
+	height: 100%;
+	transition: transform 0.5s ease;
+}
+
+.main-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Estils dels thumbnails */
+.gallery-nav {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0.5rem;
+}
+
+.thumbnail {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	border-radius: 4px;
+	overflow: hidden;
+	opacity: 0.6;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Suport per thumbnails amb background-image (millor rendiment) */
+.thumbnail {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.thumbnail:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 842px) {
+	.apartment-details {
+		padding: 1rem;
+	}
+
+	.gallery-main {
+		height: 300px;
+	}
+
+	.thumbnail {
+		width: 60px;
+		height: 60px;
+	}
+
+	.gallery-nav {
+		gap: 0.25rem;
+	}
+
+	.apartment-info h1 {
+		font-size: 2rem;
+	}
+}
+
+/* Millores per a dispositius molt petits */
+@media (max-width: 480px) {
+	.gallery-main {
+		height: 250px;
+	}
+
+	.thumbnail {
+		width: 50px;
+		height: 50px;
+	}
+
+	.gallery-nav {
+		padding: 0.25rem;
+	}
+}
