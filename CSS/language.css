@@ -235,16 +235,7 @@
 		font-size: 0.8rem;
 		min-width: 75px;
 	}
-	
-	.lang-current {
-		display: none;
-	}
-	
-	.lang-toggle::before {
-		content: '🌍';
-		margin-right: 0.25rem;
-	}
-	
+
 	.language-notification-content {
 		padding: 1.25rem;
 	}
@@ -303,6 +294,7 @@
 	.menu-items .lang-option {
 		padding: 0.6rem 1rem;
 		font-size: 0.85rem;
+		color: #2c3e50;
 	}
 }
 

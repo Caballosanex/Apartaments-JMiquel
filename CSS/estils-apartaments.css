@@ -1,24 +1,41 @@
 /* estils-apartaments.css — Apartment Listings */
 
+/* ========================================
+   Page Background
+   ======================================== */
 .apartments-main {
-	padding: 3rem 2rem;
+	padding: 0 0 4rem;
 	background:
 		linear-gradient(180deg, rgba(255, 249, 240, 0.95) 0%, rgba(250, 245, 235, 0.92) 50%, rgba(255, 249, 240, 0.95) 100%),
 		url('../media/fons_apartament.webp') center / cover no-repeat;
 }
 
+/* ========================================
+   Page Header
+   ======================================== */
 .apartments-header {
 	text-align: center;
-	margin-bottom: 3rem;
+	padding: 3.5rem 2rem 2.5rem;
+	margin-bottom: 0;
 }
 
 .apartments-header h1 {
 	font-family: var(--font-display, 'DM Serif Display', Georgia, serif);
 	color: var(--color-primary, #ff8c00);
-	font-size: 2.8rem;
+	font-size: 3rem;
 	font-weight: 400;
-	margin: 0;
+	margin: 0 0 0.6rem;
 	letter-spacing: 0.02em;
+}
+
+.apartments-header h2 {
+	font-family: var(--font-display, 'DM Serif Display', Georgia, serif);
+	color: var(--color-secondary, #004d4d);
+	font-size: 1.25rem;
+	font-weight: 400;
+	font-style: italic;
+	margin: 0;
+	opacity: 0.8;
 }
 
 /* ========================================
@@ -26,33 +43,75 @@
    ======================================== */
 .apartments-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 2rem;
 }
 
+/* ========================================
+   Apartment Card — Full-bleed Overlay Design
+   ======================================== */
 .apartment-card {
-	background: var(--color-surface, #ffffff);
+	position: relative;
 	border-radius: var(--radius-md, 14px);
 	overflow: hidden;
-	box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.07));
-	border: 1px solid var(--color-border, rgba(0, 0, 0, 0.07));
-	transition: transform 0.35s var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
-				box-shadow 0.35s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+	box-shadow: var(--shadow-lg, 0 8px 28px rgba(0, 0, 0, 0.09));
+	aspect-ratio: 4/3;
+	cursor: pointer;
+	background: #1e2322;
+	transition: transform 0.4s var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
+				box-shadow 0.4s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
 }
 
 .apartment-card:hover {
-	transform: translateY(-6px);
-	box-shadow: var(--shadow-xl, 0 16px 48px rgba(0, 0, 0, 0.12));
+	transform: translateY(-7px);
+	box-shadow: 0 24px 54px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Orange top accent that sweeps in on hover */
+.apartment-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--color-primary, #ff8c00);
+	z-index: 3;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.45s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.apartment-card:hover::before {
+	transform: scaleX(1);
+}
+
+/* Dark gradient overlay */
+.apartment-card::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		transparent 25%,
+		rgba(0, 0, 0, 0.05) 45%,
+		rgba(0, 0, 0, 0.55) 70%,
+		rgba(0, 0, 0, 0.88) 100%
+	);
+	pointer-events: none;
+	z-index: 1;
 }
 
 /* ========================================
    Card Image
    ======================================== */
 .apartment-image {
-	position: relative;
-	height: 220px;
+	position: absolute;
+	inset: 0;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -60,122 +119,128 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform 0.5s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+	transition: transform 0.65s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+	display: block;
 }
 
 .apartment-card:hover .apartment-image img {
-	transform: scale(1.06);
+	transform: scale(1.07);
 }
 
+/* Image-level CTA not needed in overlay design */
 .apartment-image .more-info-btn {
-	position: absolute;
-	bottom: 1.2rem;
-	left: 50%;
-	transform: translateX(-50%) translateY(4px);
-	background: linear-gradient(135deg, var(--color-primary, #ff8c00) 0%, #e07c00 100%);
-	color: white;
-	padding: 0.6rem 1.5rem;
-	border-radius: var(--radius-xl, 28px);
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 0.9rem;
-	opacity: 0;
-	transition: opacity 0.3s ease, transform 0.3s ease;
-	box-shadow: 0 3px 12px rgba(255, 140, 0, 0.3);
-}
-
-.apartment-card:hover .apartment-image .more-info-btn {
-	opacity: 1;
-	transform: translateX(-50%) translateY(0);
+	display: none !important;
 }
 
 /* ========================================
-   Card Content
+   Card Content — floating at bottom
    ======================================== */
 .apartment-content {
-	padding: 1.5rem 1.8rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1.75rem 1.5rem 1.5rem;
+	z-index: 2;
+	background: none;
+	transition: transform 0.4s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.apartment-card:hover .apartment-content {
+	transform: translateY(-4px);
 }
 
 .apartment-content h2 {
 	font-family: var(--font-display, 'DM Serif Display', Georgia, serif);
-	color: var(--color-secondary, #004d4d);
-	font-size: 1.35rem;
+	color: white;
+	font-size: 1.45rem;
 	font-weight: 400;
-	margin: 0 0 0.4rem 0;
+	margin: 0 0 0.3rem;
+	text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+	letter-spacing: 0.01em;
+	line-height: 1.25;
 }
 
-.location {
-	color: var(--color-primary, #ff8c00);
-	font-weight: 500;
-	font-size: 0.9rem;
-	margin: 0 0 0.8rem 0;
+.apartment-content .location {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin: 0 0 0.85rem;
 }
 
-.description {
-	color: var(--color-text-secondary, #555);
-	line-height: 1.65;
-	font-size: 0.92rem;
-	margin: 0;
-}
-
-/* Hide mobile button on desktop */
-.apartment-content .more-info-btn {
+.apartment-content .description {
 	display: none;
+}
+
+/* CTA button — appears on hover */
+.apartment-content .more-info-btn {
+	display: inline-block;
+	opacity: 0;
+	background: var(--color-primary, #ff8c00);
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.78rem;
+	letter-spacing: 0.04em;
+	padding: 0.5rem 1.25rem;
+	border-radius: 100px;
+	transform: translateY(8px);
+	transition: opacity 0.3s 0.04s ease,
+				transform 0.3s 0.04s ease,
+				background 0.2s ease;
+}
+
+.apartment-card:hover .apartment-content .more-info-btn {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.apartment-content .more-info-btn:hover {
+	background: var(--color-primary-hover, #e07c00);
+}
+
+/* Touch devices: CTA always visible */
+@media (hover: none) {
+	.apartment-content .more-info-btn {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 /* ========================================
    Responsive
    ======================================== */
 @media (max-width: 1100px) {
-	.apartments-main {
-		padding: 2rem 1rem;
+	.apartments-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+		padding: 0 1.5rem;
 	}
 
 	.apartments-header h1 {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
+	}
+}
+
+@media (max-width: 660px) {
+	.apartments-main {
+		padding: 0 0 2.5rem;
 	}
 
 	.apartments-grid {
 		grid-template-columns: 1fr;
-		max-width: 560px;
+		max-width: 440px;
+		padding: 0 1rem;
 	}
 
-	.apartment-image {
-		height: 220px;
+	.apartment-card {
+		aspect-ratio: 16/9;
 	}
 
-	.apartment-image img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	/* Hide hover button on mobile */
-	.apartment-image .more-info-btn {
-		display: none;
-	}
-
-	.apartment-content {
-		position: relative;
-		padding: 1.5rem 1.8rem;
-	}
-
-	/* Show mobile button */
 	.apartment-content .more-info-btn {
-		display: block;
 		opacity: 1;
-		position: static;
-		width: 100%;
-		text-align: center;
-		margin: 1.2rem 0 0;
-		padding: 0.75rem 0;
-		background: linear-gradient(135deg, var(--color-primary, #ff8c00) 0%, #e07c00 100%);
-		border-radius: var(--radius-sm, 8px);
 		transform: none;
-		color: white;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 0.92rem;
-		box-shadow: 0 2px 8px rgba(255, 140, 0, 0.2);
 	}
 }

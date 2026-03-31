@@ -1,6 +1,49 @@
 /* estils-movils.css — Mobile Responsive Overrides */
 
+/* ========================================
+   Menu breakpoint (916px)
+   ======================================== */
+@media (max-width: 916px) {
+
+	/* Backdrop overlay when mobile menu is open */
+	body:has(.menu-toggle:checked)::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.45);
+		z-index: 997;
+		pointer-events: auto;
+	}
+
+	/* Prevent scroll behind open menu */
+	body:has(.menu-toggle:checked) {
+		overflow: hidden;
+	}
+
+	/* Tighter header on mobile */
+	header {
+		padding: 0.5rem 1rem;
+	}
+
+	/* Hide scroll indicator on touch (no hover, not useful) */
+	.video-background::after {
+		display: none;
+	}
+
+	/* Touch-friendly menu links — min 44px tap target */
+	.menu-items a {
+		min-height: 44px;
+		display: flex;
+		align-items: center;
+		padding: 0.75rem 1rem;
+	}
+}
+
+/* ========================================
+   General mobile (842px)
+   ======================================== */
 @media (max-width: 842px) {
+
 	/* Typography */
 	.intro h1 {
 		font-size: 2rem;
@@ -10,9 +53,21 @@
 		font-size: 1.2rem;
 	}
 
+	/* Intro section — reduce vertical padding */
+	.intro {
+		padding: 3rem 1.5rem 2.5rem;
+	}
+
 	/* Gallery */
+	.gallery-container {
+		flex-direction: column;
+		align-items: center;
+		padding: 0 0.5rem;
+	}
+
 	.gallery-container img {
 		width: 100%;
+		height: 220px;
 		border-radius: var(--radius-sm, 8px);
 	}
 
@@ -22,10 +77,40 @@
 		padding: 0.8rem 1.5rem;
 	}
 
+	/* Content cards — reduce padding on mobile */
+	.content-card {
+		padding: 1.5rem;
+	}
+
+	/* Page section */
+	.page-section {
+		padding: 1.5rem 1rem;
+	}
+
+	/* Testimonials — fix the oversized decorative quote */
+	.testimonials {
+		padding: 3rem 1.5rem;
+	}
+
+	.testimonials::before {
+		font-size: 11rem;
+		top: -1rem;
+	}
+
+	.testimonials-container {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.testimonial {
+		max-width: 100%;
+		width: 100%;
+	}
+
 	/* Mobile footer */
 	.footer-movil {
 		display: block;
-		background-color: #202929;
+		background-color: var(--color-secondary);
 		padding: 0.8rem 1rem;
 		text-align: center;
 		position: sticky;
@@ -42,6 +127,11 @@
 	.footer-movil .social-btn img {
 		width: 38px;
 		height: 38px;
+	}
+
+	/* About sections */
+	.about-sections {
+		padding: 1.5rem 1rem;
 	}
 
 	/* Location page */
@@ -115,5 +205,60 @@
 		font-size: 11px !important;
 		word-spacing: -1px;
 		letter-spacing: -0.2px;
+	}
+}
+
+/* ========================================
+   Small phones (480px)
+   ======================================== */
+@media (max-width: 480px) {
+
+	/* Hero text */
+	.video-background .video-overlay h1 {
+		font-size: 2rem;
+		padding: 0 1.5rem;
+	}
+
+	.video-background .video-overlay p {
+		font-size: 0.9rem;
+		padding: 0 1.5rem;
+	}
+
+	/* Gallery thumbnails: horizontal scroll strip */
+	.gallery-nav {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		justify-content: flex-start;
+		padding: 0.5rem 0.25rem 0.75rem;
+		scroll-snap-type: x mandatory;
+		/* Hide scrollbar visually */
+		scrollbar-width: none;
+	}
+
+	.gallery-nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.thumbnail {
+		width: 64px;
+		height: 48px;
+		flex-shrink: 0;
+		scroll-snap-align: start;
+	}
+
+	/* Testimonials spacing */
+	.testimonials {
+		padding: 2.5rem 1rem;
+	}
+
+	/* Section titles */
+	.section-title {
+		font-size: 1.6rem;
+	}
+
+	/* Intro */
+	.intro {
+		padding: 2.5rem 1rem 2rem;
 	}
 }

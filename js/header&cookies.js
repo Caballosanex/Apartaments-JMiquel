@@ -81,7 +81,7 @@ function initializeMenuHandling() {
 	menuToggle = document.getElementById('menu-toggle');
 
 	document.addEventListener('click', (e) => {
-		if (window.innerWidth <= 842 &&
+		if (window.innerWidth <= 916 &&
 			menuToggle &&
 			!e.target.closest('.menu') &&
 			menuToggle.checked) {
