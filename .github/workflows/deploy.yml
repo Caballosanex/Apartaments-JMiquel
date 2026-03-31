@@ -27,6 +27,7 @@ jobs:
             --include "*.html" \
             --include "*.css" \
             --include "*.js" \
+            --include "*.json" \
             --include "robots.txt" \
             --include "sitemap.xml" \
             --include "site.webmanifest" \

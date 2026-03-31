@@ -2,7 +2,9 @@
 
 .apartments-main {
 	padding: 3rem 2rem;
-	background-image: url('../media/fons_apartament.webp');
+	background:
+		linear-gradient(180deg, rgba(255, 249, 240, 0.95) 0%, rgba(250, 245, 235, 0.92) 50%, rgba(255, 249, 240, 0.95) 100%),
+		url('../media/fons_apartament.webp') center / cover no-repeat;
 }
 
 .apartments-header {

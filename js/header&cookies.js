@@ -120,21 +120,5 @@ function getCookie(name) {
 
 // Funcionalitat de cookies
 function enableCookieFunctionality() {
-	let scrollTimer;
-
-	// Utilitzem un temporitzador per evitar massa escriptures de cookies
-	window.addEventListener('scroll', () => {
-		clearTimeout(scrollTimer);
-		scrollTimer = setTimeout(() => {
-			setCookie('scrollPosition', window.scrollY, 1);
-		}, 300);
-	});
-
-	// Restaurar la posició del scroll si existeix
-	const savedPosition = getCookie('scrollPosition');
-	if (savedPosition) {
-		requestAnimationFrame(() => {
-			window.scrollTo(0, parseInt(savedPosition));
-		});
-	}
+	// Cookie consent accepted - no additional tracking
 }
